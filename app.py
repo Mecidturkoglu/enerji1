@@ -28,6 +28,6 @@ def index():
         except Exception as e:
             yorum = f"Hata oluştu: {str(e)}"
     return render_template("index.html", yorum=yorum)
-
+yorum = yorum.encode('utf-8').decode('utf-8')
 if __name__ == "__main__":
     app.run(debug=True)
